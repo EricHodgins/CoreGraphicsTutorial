@@ -8,13 +8,17 @@
 
 import UIKit
 
+
 @IBDesignable
 
 class PushButtonView: UIButton {
 
+    @IBInspectable var fillColor: UIColor = UIColor.green
+    @IBInspectable var isAddButton: Bool = true
+    
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(ovalIn: rect)
-        UIColor.blue.setFill()
+        fillColor.setFill()
         path.fill()
         
         // Widht and Height vars for horizontal stroke
@@ -33,6 +37,13 @@ class PushButtonView: UIButton {
         
         // add a point to the path at the end of the stroke
         plusPath.addLine(to: CGPoint(x: bounds.width/2 + plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
+        
+        
+        if isAddButton {
+            // Vertial Rect for Plus Button
+            plusPath.move(to: CGPoint(x: bounds.width / 2 + 0.5, y: bounds.height / 2 - plusWidth / 2 + 0.5))
+            plusPath.addLine(to: CGPoint(x: bounds.width / 2 + 0.5, y: bounds.height / 2 + plusWidth / 2 + 0.5))
+        }
         
         // set the stroke color
         UIColor.white.setStroke()
