@@ -24,14 +24,31 @@ let π: CGFloat = CGFloat(M_PI)
         let arcWidth: CGFloat = 76
         
         let startAngle: CGFloat = 3 * π / 4
-        let endAngel: CGFloat = π / 4
+        let endAngle: CGFloat = π / 4
         
-        let path = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth/2, startAngle: startAngle, endAngle: endAngel, clockwise: true)
+        let path = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth/2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
         path.lineWidth = arcWidth
         counterColor.setStroke()
         path.stroke()
         
+        // Draw the outline
+        let angleDifference: CGFloat = 2 * π - startAngle + endAngle
+        let arcLengthPerGlass = angleDifference / CGFloat(NoOfGlasses)
+        
+        let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
+        
+        // Draw outer arc
+        let outlinePath = UIBezierPath(arcCenter: center, radius: bounds.width/2 - 2.5, startAngle: startAngle, endAngle: outlineEndAngle, clockwise: true)
+        
+        // Draw inner arc
+        outlinePath.addArc(withCenter: center, radius: bounds.width/2 - arcWidth + 2.5, startAngle: outlineEndAngle, endAngle: startAngle, clockwise: false)
+        
+        outlinePath.close()
+        
+        outlineColor.setStroke()
+        outlinePath.lineWidth = 5.0
+        outlinePath.stroke()
     }
 
 }
