@@ -28,10 +28,11 @@ class PushButtonView: UIButton {
         plusPath.lineWidth = plusHeight
         
         // move initial point of the path to the start of the horizontal stroke
-        plusPath.move(to: CGPoint(x: bounds.width / 2 - plusWidth / 2, y: bounds.height / 2))
+        // add 0.5 to stop anti-aliasing
+        plusPath.move(to: CGPoint(x: bounds.width / 2 - plusWidth / 2 + 0.5, y: bounds.height / 2 + 0.5))
         
         // add a point to the path at the end of the stroke
-        plusPath.addLine(to: CGPoint(x: bounds.width/2 + plusWidth/2, y: bounds.height/2))
+        plusPath.addLine(to: CGPoint(x: bounds.width/2 + plusWidth/2 + 0.5, y: bounds.height/2 + 0.5))
         
         // set the stroke color
         UIColor.white.setStroke()
