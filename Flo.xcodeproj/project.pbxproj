@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A81EB5F1DCE56A900EC77AE /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81EB5E1DCE56A900EC77AE /* GraphView.swift */; };
 		7A9CBCFE1DCC25B80087FD6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CBCFD1DCC25B80087FD6C /* AppDelegate.swift */; };
 		7A9CBD001DCC25B80087FD6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CBCFF1DCC25B80087FD6C /* ViewController.swift */; };
 		7A9CBD031DCC25B80087FD6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CBD011DCC25B80087FD6C /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A81EB5E1DCE56A900EC77AE /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		7A9CBCFA1DCC25B80087FD6C /* Flo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9CBCFD1DCC25B80087FD6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A9CBCFF1DCC25B80087FD6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				7A9CBD1D1DCC26110087FD6C /* PushButtonView.swift */,
 				7A9CBD1F1DCC3EBD0087FD6C /* CounterView.swift */,
 				7A9CBCFF1DCC25B80087FD6C /* ViewController.swift */,
+				7A81EB5E1DCE56A900EC77AE /* GraphView.swift */,
 				7A9CBD011DCC25B80087FD6C /* Main.storyboard */,
 				7A9CBD041DCC25B80087FD6C /* Assets.xcassets */,
 				7A9CBD061DCC25B80087FD6C /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A81EB5F1DCE56A900EC77AE /* GraphView.swift in Sources */,
 				7A9CBD001DCC25B80087FD6C /* ViewController.swift in Sources */,
 				7A9CBD1E1DCC26110087FD6C /* PushButtonView.swift in Sources */,
 				7A9CBCFE1DCC25B80087FD6C /* AppDelegate.swift in Sources */,
@@ -418,6 +422,7 @@
 				7A9CBD191DCC25B90087FD6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A9CBD1A1DCC25B90087FD6C /* Build configuration list for PBXNativeTarget "FloTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +431,7 @@
 				7A9CBD1C1DCC25B90087FD6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
