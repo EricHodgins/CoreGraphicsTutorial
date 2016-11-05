@@ -90,7 +90,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQ8-aF-w5U" customClass="GraphView" customModule="Flo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="25" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -107,14 +107,14 @@
                                 <constraints>
                                     <constraint firstItem="LqY-qm-LoO" firstAttribute="top" secondItem="yiG-th-zfP" secondAttribute="top" constant="35" id="7Wl-Km-3Y7"/>
                                     <constraint firstItem="VQ8-aF-w5U" firstAttribute="leading" secondItem="yiG-th-zfP" secondAttribute="leading" id="B5g-28-gC3"/>
-                                    <constraint firstAttribute="bottom" secondItem="VQ8-aF-w5U" secondAttribute="bottom" constant="-25" id="DKi-xx-Xbd"/>
+                                    <constraint firstAttribute="bottom" secondItem="VQ8-aF-w5U" secondAttribute="bottom" id="DKi-xx-Xbd"/>
                                     <constraint firstItem="LqY-qm-LoO" firstAttribute="centerX" secondItem="yiG-th-zfP" secondAttribute="centerX" id="IqQ-Ch-gb1"/>
                                     <constraint firstItem="LqY-qm-LoO" firstAttribute="leading" secondItem="yiG-th-zfP" secondAttribute="leading" constant="35" id="KNp-IY-zUm"/>
                                     <constraint firstAttribute="width" constant="300" id="LES-Yb-0gO"/>
                                     <constraint firstAttribute="height" constant="300" id="MK9-32-Ya2"/>
                                     <constraint firstItem="LqY-qm-LoO" firstAttribute="centerY" secondItem="yiG-th-zfP" secondAttribute="centerY" id="XhT-l0-kUe"/>
                                     <constraint firstItem="LqY-qm-LoO" firstAttribute="centerX" secondItem="VQ8-aF-w5U" secondAttribute="centerX" id="aCu-QQ-enK"/>
-                                    <constraint firstItem="VQ8-aF-w5U" firstAttribute="top" secondItem="yiG-th-zfP" secondAttribute="top" constant="25" id="cnC-J1-Eia"/>
+                                    <constraint firstItem="VQ8-aF-w5U" firstAttribute="top" secondItem="yiG-th-zfP" secondAttribute="top" id="cnC-J1-Eia"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="4ns-Cv-zYK" appends="YES" id="5ks-8a-fhg"/>

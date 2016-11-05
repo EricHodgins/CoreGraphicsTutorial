@@ -17,6 +17,11 @@ class GraphView: UIView {
     @IBInspectable var endColor: UIColor = UIColor.green
 
     override func draw(_ rect: CGRect) {
+        // set up the background clipping area
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8.0, height: 8.0))
+        path.addClip()
+        
+        
         // get the context
         let context = UIGraphicsGetCurrentContext()
         let colors = [startColor.cgColor, endColor.cgColor] as CFArray
