@@ -23,6 +23,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtZ-1H-chg" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
                                 <rect key="frame" x="138" y="384" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="j2s-Ff-cli"/>
                                     <constraint firstAttribute="width" constant="100" id="vSB-BT-qwN"/>
@@ -39,6 +40,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-W7-MFq" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
                                 <rect key="frame" x="162" y="505" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7I9-63-8RI"/>
                                     <constraint firstAttribute="height" constant="50" id="Myy-fb-Wvz"/>
@@ -70,7 +72,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Fw3-Vu-0MT" firstAttribute="centerX" secondItem="LqY-qm-LoO" secondAttribute="centerX" id="IHT-1d-FAz"/>
                                             <constraint firstItem="Fw3-Vu-0MT" firstAttribute="centerY" secondItem="LqY-qm-LoO" secondAttribute="centerY" id="Kxb-BX-sz2"/>
@@ -89,10 +91,18 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQ8-aF-w5U" customClass="GraphView" customModule="Flo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="300" height="300"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="0.99652737379074097" green="0.81296426057815552" blue="0.68558061122894287" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="0.96278959512710571" green="0.35002517700195312" blue="0.11579177528619766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.9780191800028738" green="1" blue="0.76292222533148801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="LqY-qm-LoO" firstAttribute="top" secondItem="yiG-th-zfP" secondAttribute="top" constant="35" id="7Wl-Km-3Y7"/>
