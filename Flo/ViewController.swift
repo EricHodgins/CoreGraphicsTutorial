@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterLabel: UILabel!
     
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var graphView: UIView!
+    @IBOutlet weak var graphView: GraphView!
     
     @IBOutlet weak var averageWaterDrunk: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
@@ -51,10 +51,87 @@ class ViewController: UIViewController {
         } else {
             // Show graph
             UIView.transition(from: counterView, to: graphView, duration: 1.0, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
+            setupGraphDisplay()
         }
         
         isGraphViewShowing = !isGraphViewShowing
     }
     
+    func setupGraphDisplay() {
+        // Use 7 days for graph - can use any number,
+        // but labels and sample data are set up for 7 days
+        
+        //let noOfDays: Int = 7
+        
+        // replace last day with today's actual data
+        graphView.graphPoints[graphView.graphPoints.count - 1] = counterView.counter
+        
+        // indicate the the graph needs to be redrawn
+        graphView.setNeedsDisplay()
+        
+        maxLabel.text = "\(graphView.graphPoints.max()!)"
+        
+        let average = graphView.graphPoints.reduce(0, +) / graphView.graphPoints.count
+        averageWaterDrunk.text = "\(average)"
+        
+        //set up labels
+        //day of week labels are set up in storyboard with tags
+        //today is last day of the array need to go backwards
+        
+        // - get today's day number
+        
+        var weekday = Calendar.current.dateComponents([.weekday], from: Date()).weekday!
+        
+        let days = ["S", "M", "T", "W", "T", "F", "S"]
+        
+        // setup the name labels
+        for i in stride(from: days.count, to: 0, by: -1) {
+            if let labelView = graphView.viewWithTag(i) as? UILabel {
+
+                weekday -= 1
+                
+                if weekday < 0 {
+                    weekday = days.count - 1
+                }
+                
+                labelView.text = days[weekday]
+            }
+        }
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
