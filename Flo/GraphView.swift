@@ -49,6 +49,7 @@ class GraphView: UIView {
         // Calculate the x point
         
         let margin: CGFloat = 20.0
+        
         let columnXPoint = { (column: Int) -> CGFloat in
             //Calculate gap between points
             let spacer = (width - margin*2 - 4) / CGFloat((self.graphPoints.count - 1))
@@ -63,6 +64,7 @@ class GraphView: UIView {
         let bottomBorder: CGFloat = 50
         let graphHeight = height - topBorder - bottomBorder
         let maxValue = graphPoints.max()!
+        
         let columnYPoint = { (graphPoint: Int) -> CGFloat in
             var y:CGFloat = CGFloat(graphPoint) / CGFloat(maxValue) * graphHeight
             y = graphHeight + topBorder - y // Flip the graph
